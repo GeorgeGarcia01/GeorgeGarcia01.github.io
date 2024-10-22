@@ -4,135 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge García</title>
-    <link rel="stylesheet" href="https://latex.vercel.app/style.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f7f7f7;
             color: #333;
-            line-height: 1.6;
+            margin: 0;
         }
 
-        /* Centering content */
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #0073e6;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main section styles */
         section {
             padding: 50px 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 4rem;
-            color: #222;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #555;
-            margin-top: 10px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
 
-        /* Links section */
-        .links {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .links a {
-            text-decoration: none;
+        /* Welcome and Intro */
+        .intro h1 {
+            font-size: 2.5rem;
+            text-align: center;
             color: #0073e6;
-            margin: 0 15px;
+        }
+
+        .intro p {
             font-size: 1.2rem;
-            border: 2px solid transparent;
-            padding: 10px 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease-in-out;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        .links a:hover {
-            border-color: #0073e6;
-            background-color: #0073e6;
-            color: #fff;
-        }
-
-        /* About section */
-        .about {
-            background-color: #f0f0f0;
-        }
-
-        /* Skills section */
-        .skills ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 0;
-        }
-
-        .skills li {
-            background-color: #0073e6;
-            color: white;
-            padding: 15px 20px;
-            margin: 10px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-        }
-
-        /* Projects section */
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .project-card {
-            background-color: white;
+        /* News section */
+        .news {
+            background-color: #fff;
+            padding: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin: 20px;
             border-radius: 10px;
-            overflow: hidden;
         }
 
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .news h2 {
+            font-size: 2rem;
+            color: #0073e6;
+            margin-bottom: 20px;
         }
 
-        .project-card h3 {
-            font-size: 1.5rem;
-            padding: 20px;
-            background-color: #0073e6;
-            color: white;
+        .news-item {
+            margin-bottom: 15px;
         }
 
-        .project-card p {
-            padding: 15px;
-            color: #333;
+        .news-item span {
+            font-weight: bold;
+            color: #555;
         }
 
         /* Footer */
         footer {
             background-color: #333;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
         }
 
         footer a {
@@ -147,68 +99,55 @@
     </style>
 </head>
 <body>
-    <!-- Header section -->
-    <section class="header">
-        <h1>Jorge García</h1>
-        <h2>Mechanical Engineer, Robotics Enthusiast, Software Developer</h2>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#about">About Me</a>
+        <a href="#news">News</a>
+        <a href="#projects">Projects</a>
+        <a href="#honors">Honors and Awards</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Welcome and Intro -->
+    <section class="intro" id="about">
+        <h1>🔥 Welcome to My Page! 🔥</h1>
+        <p>
+            I am a Mechanical Engineer and Robotics Enthusiast currently pursuing my Master’s at Stanford University.
+            My interests include robotics, control systems, and autonomous systems. This page highlights my latest
+            research, projects, and achievements.
+        </p>
     </section>
 
-    <!-- Links section -->
-    <div class="links">
-        <a href="https://github.com/jalgarcia" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/jalgarcia/" target="_blank">LinkedIn</a>
-        <a href="mailto:jalgarci@stanford.edu">Email Me</a>
-    </div>
-
-    <!-- About section -->
-    <section class="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Jorge! I'm a Mechanical Engineering student currently working on cool robotics projects while pursuing my master's degree at Stanford. I specialize in integrating software with hardware, making sure robots work seamlessly with control systems. I'm passionate about building autonomous systems and optimizing processes with smart algorithms.</p>
-    </section>
-
-    <!-- Skills section -->
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Robotics</li>
-            <li>Software Development</li>
-            <li>Mechanical Design</li>
-            <li>Control Systems</li>
-            <li>Python</li>
-            <li>ROS/ROS2</li>
-            <li>C++</li>
-            <li>CAD (SolidWorks, Fusion)</li>
-        </ul>
-    </section>
-
-    <!-- Projects section -->
-    <section class="projects">
-        <h2>Projects</h2>
-
-        <div class="projects">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project Image">
-                <h3>Autonomous Conveyor System</h3>
-                <p>Developed an autonomous system to optimize fruit-picking processes, reducing operation time by 50%.</p>
-            </div>
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project Image">
-                <h3>CubeSat Orientation Sensor</h3>
-                <p>Designed custom PCB sensors for CubeSat, integrating photodiodes for accurate orientation tracking.</p>
-            </div>
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project Image">
-                <h3>Fruit-Picking Robot</h3>
-                <p>Worked on multi-arm robots to precisely handle and pick fruit using real-time sensor data.</p>
-            </div>
+    <!-- News Section -->
+    <section class="news" id="news">
+        <h2>🔥 News 🔥</h2>
+        <div class="news-item">
+            <span>2024.04</span> 🚀 My paper on Sim2Real-RL soft robotic navigation has been accepted by ARSO 2024 to be held in Hong Kong!
         </div>
+        <div class="news-item">
+            <span>2023.07</span> 🎉 My first paper as a co-first author has been published on IEEE Transactions on Industrial Informatics!
+        </div>
+        <div class="news-item">
+            <span>2023.07</span> 🏆 Our work on Sim-to-Real Segmentation in Robot-assisted Surgery won the Best Poster Award at ICRA 2023!
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <p>Details about projects will go here.</p>
+    </section>
+
+    <!-- Honors and Awards -->
+    <section class="honors" id="honors">
+        <h2>Honors and Awards</h2>
+        <p>Details about honors and awards will go here.</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Made by Jorge García | <a href="https://jalgarcie.github.io">jalgarcia.github.io</a></p>
+        <p>Made by Jorge García | <a href="https://jalgarcia.github.io">jalgarcia.github.io</a></p>
     </footer>
 
 </body>
